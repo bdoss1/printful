@@ -1,0 +1,102 @@
+{
+  "private": true,
+  "name": "brayn-test",
+  "version": "1.0.0",
+  "description": "The test for brayn",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run dev",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "eslint": "node_modules/eslint/bin/eslint.js . --fix",
+    "watch:lint": "node node_modules/eslint-watch/bin/esw -w --ext .js,.vue resources/assets/ --fix --cache",
+    "lint": "eslint .js,.vue resources/assets/ --fix",
+    "precommit": "lint-staged",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "test": "cross-env NODE_ENV=development mocha-webpack --webpack-config=node_modules/laravel-mix/setup/webpack.config.js --watch --require tests/Javascript/setup.js tests/Javascript/**/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giorgi-g/brayn.git"
+  },
+  "lint-staged": {
+    "resources/assets/**/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "vue-browser-geolocation": "^1.0.1",
+    "vue-bus": "^1.2.1",
+    "vue-form": "^4.8.1",
+    "vue-js-modal": "^1.3.16",
+    "vue-mce": "^1.4.1",
+    "vue-multiselect": "^2.1.4",
+    "vue-paginate": "^3.6.0",
+    "vue-resource": "^1.3.5",
+    "vue-spinner": "^1.0.3",
+    "vue-swal": "^0.1.0",
+    "vue2-datepicker": "^2.10.3",
+    "vue2-google-maps": "^0.8.11",
+    "vuebar": "0.0.18",
+    "vuelidate": "^0.6.2"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.4.0",
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-e2e-cypress": "^3.5.0",
+    "@vue/cli-plugin-eslint": "^3.5.0",
+    "@vue/cli-plugin-pwa": "^3.5.0",
+    "@vue/cli-plugin-unit-mocha": "^3.5.0",
+    "@vue/cli-service": "^3.5.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "assert": "^1.4.1",
+    "axios": "^0.16.2",
+    "axios-mock-adapter": "^1.16.0",
+    "babel-eslint": "^10.0.1",
+    "bootstrap": "^4.1.3",
+    "bootstrap-sass": "^3.3.7",
+    "chai": "^4.1.2",
+    "cross-env": "^5.1",
+    "element-ui": "^2.6.3",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "eslint-watch": "^5.0.1",
+    "expect": "^21.2.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2",
+    "js-file-download": "^0.4.5",
+    "jsdom": "^11.3.0",
+    "jsdom-global": "^3.0.2",
+    "laravel-mix": "^1.0",
+    "lodash": "^4.17.4",
+    "mocha": "^4.0.1",
+    "mocha-axios": "^1.3.0",
+    "mocha-webpack": "^0.7.0",
+    "moxios": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "popper.js": "^1.14.7",
+    "sass-loader": "^7.1.0",
+    "sinon": "^7.3.1",
+    "vue": "^2.6.10",
+    "vue-moment": "^4.0.0",
+    "vue-router": "^3.0.2",
+    "vue-template-compiler": "^2.6.10",
+    "vuex": "^3.1.0",
+    "vuex-map-fields": "^1.3.1"
+  },
+  "keywords": [
+    "Brayn",
+    "Test"
+  ],
+  "author": "Giorgi Gumburashvili",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giorgi-g/brayn/issues"
+  },
+  "homepage": "https://github.com/giorgi-g/brayn#readme"
+}

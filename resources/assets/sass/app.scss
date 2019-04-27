@@ -1,0 +1,75 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Bootstrap
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+#app {
+	min-height: 100vh;
+}
+
+.row {
+	margin: 0;
+
+	.card {
+
+	}
+}
+
+.block {
+    justify-content: center;
+    align-items: center;
+	flex-wrap: wrap;
+    display: flex;
+    height: 100%;
+
+	&.block-quiz {
+	    flex-direction: column;
+	    align-self: center;
+
+		.panel {
+			display: inline-block;
+			margin: 0 auto;
+
+			.row {
+				margin-bottom: 30px;
+			}
+		}
+
+		.container {
+			text-align: center;
+		}
+	}
+
+	&.block-question {
+	    background: rgba(255, 255, 255, 1);
+	    position: fixed;
+	    padding: 20px 0;
+	    width: 100%;
+	    z-index: 2;
+	    left: 0;
+	    top: 0;
+
+	    .container {
+		    display: block;
+		    height: auto;
+	    	float: none;
+	    }
+	}
+
+	&.block-result {
+		background: rgba(255, 255, 255, 1);
+	    text-align: center;
+	    position: fixed;
+	    width: 100%;
+		z-index: 3;
+	    left: 0;
+	    top: 0;
+	}
+}
